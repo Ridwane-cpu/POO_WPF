@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Intor WPF" Height="450" Width="800">
     <Grid>
-        <TextBlock Name="tbIntro" HorizontalAlignment="center" TextWrapping="Wrap" Text="Hello World" VerticalAlignment="center"/>
-
+        <TextBlock Name="tbIntro" HorizontalAlignment="center" TextWrapping="Wrap" Text="Hello World" VerticalAlignment="center" />
+        <Button Height="50" Width="100" VerticalAlignment="Bottom" Margin="10" Click="OnOnOff_Click">Click Moi </Button>
     </Grid>
 </Window>

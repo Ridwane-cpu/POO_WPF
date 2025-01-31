@@ -89,12 +89,12 @@ Je t'invite aussi à aller voir le menu! Assures-toi de comprendre comment il fo
 
 #### Ce que tu dois faire
 
-Créer une interface qui permet de jouter à devnine le chiffre avec des boutons de 1 à 20.
+Créer une interface qui permet de jouer à devnine le chiffre avec des boutons de 1 à 20.
 
 Tu dois ajouter les boutons à ton interface avec le code c# (PAS EN XML).
 Aides-toi de l'exercice précédent pour ajouter 20 boutons. Tu ne dois pas ajouter colonnes dans la grid, tu dois seulement utiliser margin.
 
-Pour ajouter un évènement click sur un bouton, tu peux utiliser ce bout de code. 
+Pour ajouter un évènement _click_ sur un bouton, tu peux utiliser ce bout de code. 
 
 `button.Click += OnBtnNumberClick;`
 
@@ -117,5 +117,5 @@ Voici quelques captures d'écran pour t'aider.
 
 BONUS : 
 - Au lieu d'utiliser margin, ajoute les boutons à un élément grid.
-- Disable le bouton quan tu clics dessus. Attention! Tu dois les remettre en fonction quand la partie redémarre!
+- _Disable_ le bouton quand tu clics dessus. Attention! Tu dois les remettre en fonction quand la partie redémarre!
 - Faire fonctionner le menu.
