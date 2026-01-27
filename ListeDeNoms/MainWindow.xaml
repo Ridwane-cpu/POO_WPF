@@ -18,7 +18,7 @@
             </Grid.ColumnDefinitions>
             <Label Content="Le nom" VerticalAlignment="Center" />
             <TextBox Name="edtName" Height="20" Width="300" HorizontalAlignment="Right" Margin="0 0 10 0" KeyDown="OnEdtNomKeyDown" />
-            <Button Grid.Column="1" Content="Ajouter ce nom" Width="Auto" Height="Auto" VerticalAlignment="Center" Margin="10 0" Click="OnBtnAddNameClick"/>
+            <Button x:Name="btnAddName" Grid.Column="1" Content="Ajouter ce nom" Width="Auto" Height="Auto" VerticalAlignment="Center" Margin="10 0" Click="OnBtnAddNameClick"/>
         </Grid>
         <Grid Grid.Row="1" Name="gridNoms"/>
     </Grid>
