@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace ListeDeNoms
 {
@@ -8,7 +9,9 @@ namespace ListeDeNoms
     /// </summary>
     public partial class MainWindow : Window
     {
-        int comteur = 0;
+        int comteurMargin = 0;
+        int NAME_Top_Margin_Value = 1;
+        int Name_Left_Margin_Value = 10;
         public MainWindow()
         {
             InitializeComponent();
@@ -17,7 +20,10 @@ namespace ListeDeNoms
         void OnEdtNomKeyDown(object sender, EventArgs e)
         {
             // Comment on ajoute un évènement en xaml?
-
+            if (e is KeyEventArgs keyEvent && keyEvent.Key == Key.Enter)
+            {
+                AddName(edtName.Text);
+            }
 
 
         }
@@ -31,17 +37,17 @@ namespace ListeDeNoms
 
         private void AddNameText()
         {
-            if (comteur < 10)
+            if (comteurMargin < 10)
             {
                 var tbNom = new TextBlock();
                 tbNom.Text = edtName.Text;
-                tbNom.Margin = new Thickness(10, 1, 0, 0);
+                tbNom.Margin = new Thickness(Name_Left_Margin_Value, NAME_Top_Margin_Value, 0, 0);
                 gridNoms.RowDefinitions.Add(new RowDefinition());
                 Grid.SetRow(tbNom, gridNoms.RowDefinitions.Count - 1);
                 gridNoms.Children.Add(tbNom);
-                comteur++;
+                comteurMargin++;
             }
-            else if (comteur == 10)
+            else if (comteurMargin == 10)
             {
                 btnAddName.IsEnabled = false;
             }
