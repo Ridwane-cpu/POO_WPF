@@ -8,7 +8,8 @@ namespace ChiffreSecret
         private const int BUTTON_Width = 39;
         int NumberOfAttempts;
         int NumberToFind;
-        Random Random = new Random();
+        int numberRandom = Random.Shared.Next(0, 20);
+        int valueBtn = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -35,12 +36,29 @@ namespace ChiffreSecret
         {
             if (sender is Button button)
             {
-                MessageBox.Show(button.Content.ToString());
-            }
-        }
+                valueBtn = int.Parse(button.Content.ToString());
 
-        void OnMenuNewGameClick(object sender, EventArgs e)
+                if (valueBtn == numberRandom)
+                {
+                    MessageBox.Show($" Vous avez gangner, le chiffre etait bien {button.Content.ToString()}");
+                }
+                else if (valueBtn < numberRandom)
+                {
+                    tbHint.Text = "↑";
+                }
+                else if (valueBtn > numberRandom)
+                {
+                    tbHint.Text = "↓";
+                }
+            }
+
+
+        }
+        void OnMenuNewGameClick(object sender, RoutedEventArgs e)
         {
+            valueBtn = 0;
+            numberRandom = Random.Shared.Next(0, 20);
+            tbHint.Text = "?";
 
         }
     }
